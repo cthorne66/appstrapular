@@ -13,8 +13,11 @@ define([
 
 	// Prototyped view functions
 	Backbone.View.prototype.setup = function () {};
-	Backbone.View.prototype.close = function () {
-		this.remove();
+	Backbone.View.prototype.close = function (removeDOM) {
+		var remove = (typeof removeDOM !== 'undefined' && removeDOM);
+		if (remove) {
+			this.remove();
+		}
 		this.unbind();
 		this.undelegateEvents();
 		if (this.onClose) {
