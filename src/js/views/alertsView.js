@@ -1,7 +1,7 @@
 define([
-	'main',
+	'core',
 	'text!html/tplAlerts.html'
-], function (main, template) {
+], function (core, template) {
 
 	mv.views.AlertsView = Backbone.View.extend({
 
