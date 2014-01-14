@@ -23,6 +23,10 @@ define([
 			'click .example-links': 'processClick'
 		},
 
+		/**
+		 * A very basic method to show examples of event binding in a view
+		 * @param  {Object} event An actual click event
+		 */
 		processClick: function (event) {
 			event.preventDefault();
 			alert('you clicked a link');

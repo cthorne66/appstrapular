@@ -27,22 +27,31 @@ define([
 			'global alerts/hideMainAlert': 'hideMainAlert'
 		},
 
+		/**
+		 * Showing the received alert on the page
+		 * @param  {Object} alertData Object containing the type and message of an alert
+		 */
 		showMainAlert: function (alertData) {
 			this.model.clear();
-			//this.model.set(alertData);
 			this.populateAlertValues(alertData);
 			this.render();
 			$('html, body').animate({
 				scrollTop: 0
-				// scrollTop: $("#alert-container").offset().top
 			}, 500);
 		},
 
+		/**
+		 * Hiding any displayed alerts currently shown on the page
+		 */
 		hideMainAlert: function (alertData) {
 			this.$el.html('');
 			this.model.clear();
 		},
 
+		/**
+		 * Determining what type of alert to show, and updating the model
+		 * @param  {Object} alertData Object containing the type and message of an alert
+		 */
 		populateAlertValues: function (alertData) {
 			switch (alertData.type) {
 			case mv.enums.alertTypes.SUCCESS:

@@ -29,6 +29,9 @@ define([
 		mainContainer: '#main-container',
 		alertContainer: '#alert-container',
 
+		/**
+		 * This represents the default landing page of the site
+		 */
 		indexView: function () {
 			require(['views/homeView'], function (HomeView) {
 				closeView(mv.i.views.homeView);
@@ -45,6 +48,10 @@ define([
 			});
 		},
 
+		/**
+		 * This brings you to a page where you can see examples of various types alerts being shown via
+		 * a global publish/subscribe mechanism
+		 */
 		alertsView: function () {
 			require(['views/alertsView'], function (AlertsView) {
 				closeView(mv.i.views.alertsView);

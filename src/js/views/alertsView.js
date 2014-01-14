@@ -23,6 +23,10 @@ define([
 			'click .btn-danger': 'dangerClick'
 		},
 
+		/**
+		 * To publish a global message for a successful alert
+		 * @param  {Object} event The actual triggering event
+		 */
 		successClick: function (event) {
 			event.preventDefault();
 			Backbone.trigger('alerts/showMainAlert', {
@@ -31,6 +35,10 @@ define([
 			});
 		},
 
+		/**
+		 * To publish a global message for a warning alert
+		 * @param  {Object} event The actual triggering event
+		 */
 		warningClick: function (event) {
 			event.preventDefault();
 			Backbone.trigger('alerts/showMainAlert', {
@@ -39,6 +47,10 @@ define([
 			});
 		},
 
+		/**
+		 * To publish a global message for a danger alert
+		 * @param  {Object} event The actual triggering event
+		 */
 		dangerClick: function (event) {
 			event.preventDefault();
 			Backbone.trigger('alerts/showMainAlert', {

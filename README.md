@@ -31,6 +31,9 @@ A quick start for a JS application, which includes testing &amp; building operat
 	4. Run 'npm install -g scaffolt' from the command line to install scaffolt globally (for code generation)
 	5. Run `npm install` from the command line to install remaining local dependencies
 
+	Optional
+	* If you want to use the options to generate full-project documentation from the JSDoc in your src code, you will need to install Pygments, which is a dependency of grunt-docker used in this project.  Instructions can be found here: [http://pygments.org/download/]
+
 ###Workflows from command line
 
 	`grunt`

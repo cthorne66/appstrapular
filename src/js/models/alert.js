@@ -4,7 +4,7 @@ define([
 
 	mv.models.Alert = Backbone.Model.extend({
 
-		// showing what attributes to expect in this model
+		// Explicitly listing what attributes to expect in this model
 		defaults: {
 			type: '',
 			message: '',
